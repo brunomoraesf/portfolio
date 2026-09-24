@@ -1,0 +1,59 @@
+ /* ===============================
+   LINKS FORA DE BIO (conteúdo)
+   ===============================
+
+   🔹 Genéricos
+   - content_link        -> link genérico em post ou site
+   - banner              -> banner clicável
+   - cta_button          -> botão de chamada para ação
+   - landing_page        -> link vindo de landing page
+
+   🔹 Redes sociais
+   - social_post         -> link dentro de post em rede social
+   - story               -> link em story (Instagram, Facebook)
+   - comment             -> link em comentário
+   - pinned_post         -> link em post fixado
+
+   🔹 Vídeo e lives
+   - video_description   -> link na descrição de vídeo (YouTube)
+   - video_card          -> card clicável no vídeo
+   - end_screen          -> tela final de vídeo
+   - live_description    -> descrição de live
+   - live_chat           -> link divulgado no chat ao vivo
+   - live_overlay        -> overlay durante a live
+   - channel_panel       -> link em painel de canal (Twitch)
+
+   🔹 Código e documentação
+   - repo_readme         -> link dentro de README
+   - repo_docs           -> link em documentação
+   - repo_issue          -> link em issue
+   - repo_release        -> link em release
+   - code_comment        -> link em comentário de código
+   - docs_sidebar        -> link em menu lateral da documentação
+
+   🔹 Comunidades e mensageria
+   - discord_server      -> link fixado em servidor Discord
+   - discord_channel     -> link em canal específico do Discord
+   - telegram_channel    -> link em canal do Telegram
+   - whatsapp_status     -> link em status do WhatsApp
+
+   🔹 Conteúdo editorial
+   - blog_post           -> link em artigo de blog
+   - article             -> artigo externo (Medium, Dev.to etc.)
+
+   🔹 E-mail e comunicação
+   - email_signature     -> link na assinatura de e-mail
+   - newsletter          -> link em newsletter
+
+   🔹 Offline / híbrido
+   - qr_code             -> QR Code físico
+   - event_slide         -> slide de palestra ou apresentação
+   - print_material      -> material impresso
+
+Regra que mantém tudo saudável 🧠
+utm_source = plataforma
+utm_medium = local/contexto do link
+nomes claros, minúsculos, sem acento
+só criar quando realmente precisar
+
+   =============================== *//

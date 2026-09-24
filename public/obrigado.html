@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mensagem Enviada!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>✅ Mensagem Enviada com Sucesso!</h1>
+    <p>Obrigado pelo seu contato, Bruno responderá em breve.</p>
+    <p><em>Você será redirecionado automaticamente em 5 segundos...</em></p>
+    <a href="https://bmfolio.web.app/" class="btn">Voltar ao Site</a>
+  </div>
+
+  <script>
+    // Redirecionamento automático após 5 segundos
+    setTimeout(() => {
+      window.location.href = "https://bmfolio.web.app/";
+    }, 5000);
+  </script>
+</body>
+</html>

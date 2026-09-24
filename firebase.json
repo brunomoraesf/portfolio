@@ -1,0 +1,22 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "redirects": [
+  { "source": "/linkedin",   "destination": "/?utm_source=linkedin&utm_medium=social_bio", "type": 301 },
+  { "source": "/facebook",   "destination": "/?utm_source=facebook&utm_medium=social_bio", "type": 301 },
+  { "source": "/instagram",  "destination": "/?utm_source=instagram&utm_medium=social_bio", "type": 301 },
+  { "source": "/tiktok",     "destination": "/?utm_source=tiktok&utm_medium=social_bio", "type": 301 },
+  { "source": "/pinterest",  "destination": "/?utm_source=pinterest&utm_medium=social_bio", "type": 301 },
+  { "source": "/youtube",    "destination": "/?utm_source=youtube&utm_medium=social_bio", "type": 301 },
+  { "source": "/twitch",     "destination": "/?utm_source=twitch&utm_medium=social_bio", "type": 301 },
+  { "source": "/github",     "destination": "/?utm_source=github&utm_medium=social_bio", "type": 301 },
+  { "source": "/link",       "destination": "/?utm_source=github&utm_medium=content_link", "type": 301 }
+    ]
+  }
+}
+

@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- 
+  Configuração necessária para compatibilidade com serviços externos como FormSubmit.
+  Previne problemas de bloqueio de redirecionamento em alguns navegadores.
+  -->
+  <meta name="referrer" content="no-referrer-when-downgrade">
+
+  <title>BRUNO MORAES - Portfólio</title>
+  <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;600;700;900&display=swap">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="layout.css">
+  <link rel="stylesheet" href="componentes.css">
+  <link rel="stylesheet" href="animacoes.css">
+
+  <!--
+  <script type="module">
+    // 1. Importamos o initializeApp e o Analytics (incluindo o logEvent)
+    import {initializeApp} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+    import {getAnalytics, logEvent} from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+
+    // 2. Sua configuração (já conferida e correta)
+    const firebaseConfig = {
+      apiKey: "AIzaSyCkiYhYg-fUn9o7teqHKagnIl5SGZ6GAPY",
+      authDomain: "bmfolio.firebaseapp.com",
+      projectId: "bmfolio",
+      storageBucket: "bmfolio.firebasestorage.app",
+      messagingSenderId: "1067861123790",
+      appId: "1:1067861123790:web:07502c385e51b828e9e69f",
+      measurementId: "G-R59C91JQMY"
+    };
+
+    // 3. Inicializa o Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // 4. LÓGICA DE RASTREIO DINÂMICO
+    // Esta parte lê o que você colocar no link do GitHub automaticamente
+    const urlParams = new URLSearchParams(window.location.search);
+    const origem = urlParams.get('utm_source'); // ex: github
+    const detalhe = urlParams.get('utm_medium'); // ex: repo_calculadora, profile, etc.
+
+    if (origem === 'github' && detalhe) {
+      // Envia para o Firebase o evento com o nome do repositório específico
+      logEvent(analytics, 'origem_github', {
+        local_clicado: detalhe,
+        campanha: urlParams.get('utm_campaign') || 'portfolio'
+      });
+
+      console.log("✅ Sucesso! Visitante do GitHub detectado via: " + detalhe);
+    }
+  </script>
+-->
+
+</head>
+
+<body>
+  <!-- CARREGANDO ... -->
+  <!-- Cria uma animação de carregamento na página web que é exibida enquanto o conteúdo da página é carregado -->
+  <div id="precarregamento" class="precarregamento">
+    <p><span id="loading-text">Carregando idéias&nbsp;</span><span id="dots"></span></p>
+
+    <div id="carregando" class="carregando"></div>
+  </div>
+  <main id="principal" class="principal">
+
+    <!-- Não visualizável -->
+    <div class="esconder">
+      <input id="sobre" class="" type="radio" name="sec" value="">
+      <input id="habilidades" class="" type="radio" name="sec" value="">
+      <input id="projetos" class="" type="radio" name="sec" value="">
+      <input id="Blog" class="" type="radio" name="sec" value="">
+      <input id="contato" class="" type="radio" name="sec" value="">
+    </div>
+    <!-- Não visualizável -->
+    <!----------------------------------------------------------------------->
+    <!-- SEÇÃO SOBRE -->
+    <label class="label-secao sec-ativa" for="sobre">
+      <section class="secao">
+        <header class="cabecalho tit-ativo">
+          <h1 class="ttl-a">Bruno Moraes</h1>
+          <h2 class="ttl-b"><span class="ttl-b-inner">Sobre</span></h2>
+        </header>
+        <div class="corpo apresentacao">
+          <h3 class="saudacao">
+
+            <span>Olá, Mundo!</span>
+          </h3>
+
+          <ul class="lista-sobre">
+            <li>
+              <i class="fa-solid fa-user"></i>
+              <span>Me chamo <strong>Bruno Moraes</strong>.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-earth-americas"></i>
+              <span>Sou de <strong>Brasília, Brasil</strong>.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-briefcase"></i>
+              <span>Trabalho como <strong>servidor público</strong>.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-star"></i>
+              <span><strong>Programação</strong> é meu passatempo favorito, mas também gosto de <strong>ler livros e
+                  mangás</strong>.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-camera"></i>
+              <span>Estou explorando o mundo da <strong>fotografia</strong> para aprimorar minhas habilidades nessa
+                área.</span>
+            </li>
+          </ul>
+          <p class="boas-vindas">
+            <span>Boas-vindas!!!</span>
+          </p>
+        </div>
+        <footer class="rodape botao">
+          <a href="http://lattes.cnpq.br/6429883106862078" target="_blank">
+            <i class="fa-solid fa-image-portrait"></i>
+            <span>Currículo</span>
+          </a>
+        </footer>
+      </section>
+    </label>
+    <!----------------------------------------------------------------------->
+    <!-- SEÇÃO HABILIDADES -->
+    <label class="label-secao" for="habilidades">
+      <section class="secao">
+        <header class="cabecalho">
+          <h2 class="ttl-a">Profissional Digital</h2>
+          <h2 class="ttl-b"><span class="ttl-b-inner">Profissional</span></h2>
+        </header>
+        <div class="corpo heading">
+          <p>Eu Crio, Desenvolvo, Programo e Mantenho os Serviços relacionados à Tecnologia e Designer Digital.</p>
+          <h3 class="cd-headline clip">
+            <span>Eu sou</span>
+            <span class="cd-words-wrapper">
+              <b class="is-visible">Web Designer</b>
+              <b>Ui/Ux Designer</b>
+              <b>Desenvolvedor Full Stack</b>
+              <b>Designer Digital</b>
+              <b>Designer Criativo</b>
+              <b>Programador</b>
+              <b>Ilustrador</b>
+              <b>Fotógrafo</b>
+            </span>
+          </h3>
+        </div>
+        <footer class="rodape botao">
+          <a href="#">
+            <i class="fa-solid fa-book-open"></i>
+
+            <span>Visitar</span>
+          </a>
+        </footer>
+      </section>
+    </label>
+    <!----------------------------------------------------------------------->
+    <!-- SEÇÃO TRABALHOS -->
+    <!-- SEÇÃO PROJETOS -->
+    <label class="label-secao" for="projetos">
+      <section class="secao">
+        <header class="cabecalho">
+          <h2 class="ttl-a">Projetos</h2>
+          <h2 class="ttl-b"><span class="ttl-b-inner">Projetos</span></h2>
+        </header>
+        <div class="corpo">
+          <p>Aqui eu reúno projetos que criei para aprender, experimentar e, quando dão certo, compartilhar. Uma mistura
+            de estudo, tentativa e criatividade.</p>
+        </div>
+        <footer class="rodape botao">
+          <a href="#">
+            <i class="fa-solid fa-rocket"></i>
+            <span>Visitar</span>
+          </a>
+        </footer>
+      </section>
+    </label>
+    <!----------------------------------------------------------------------->
+    <!-- SEÇÃO BLOG -->
+    <label class="label-secao" for="Blog">
+      <section class="secao">
+        <header class="cabecalho">
+          <h2 class="ttl-a ttl-blog">Falando Sobre ...</h2>
+          <h2 class="ttl-b"><span class="ttl-b-inner">Blog</span></h2>
+        </header>
+        <div class="corpo">
+          <p>Mantenho o blog <strong>Falando Sobre ...</strong> para praticar o hábito de escrever e compartilhar
+            ideias. É onde registro meu aprendizado em desenvolvimento de games, além de escrever sobre Tecnologia,
+            Criatividade, História e Cultura.</p>
+        </div>
+        <footer class="rodape botao">
+          <a href="https://bm-blog.web.app/" target="_blank">
+
+            <i class="fa-solid fa-newspaper"></i>
+            <!--<i class="fa-solid fa-comment-dots"></i>
+  <i class="fa-solid fa-feather-pointed"></i>-->
+            <span>Visitar</span>
+          </a>
+        </footer>
+      </section>
+    </label>
+    <!----------------------------------------------------------------------->
+    <!-- SEÇÃO CONTATO -->
+    <label class="label-secao" for="contato">
+      <section class="secao">
+        <header class="cabecalho">
+          <h2 class="ttl-a">Contato</h2>
+          <h2 class="ttl-b"><span class="ttl-b-inner">Contato</span></h2>
+        </header>
+        <div class="corpo">
+          <p>Se você tiver alguma dúvida ou apenas quiser dizer olá, sinta-se à vontade para entrar em contato comigo.
+            Abaixo estão algumas das minhas páginas sociais:</p>
+          <form action="https://formsubmit.co/el/yiyoje" method="POST"> <!-- https://formsubmit.co/ -->
+            <!-- Configurações FormSubmit -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://bmfolio.web.app/obrigado.html">
+            <input type="hidden" name="_subject" value="Contato do Portfólio">
+            <input type="text" name="_honey" style="display:none">
+
+            <input type="hidden" name="_autoresponse"
+              value="Obrigado pelo contato! Recebi sua mensagem e responderei em breve.">
+
+            <fieldset class="conjuntoDeCampos">
+              <!--<legend class="legendaForm">Contate-me</legend>-->
+
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="nomeContato" class="labelContato">
+                    Nome:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <input id="nomeContato" type="text" name="Nome" class="nomeContato" required>
+                </div>
+              </div>
+
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="emailContato" class="labelContato">
+                    E-mail:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <input id="emailContato" type="email" name="E-mail" class="emailContato" required>
+                </div>
+              </div>
+
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="assuntoContato" class="labelContato">
+                    Assunto:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <select id="assuntoContato" name="Assunto" class="assuntoContato" required>
+                    <option value="Comentário" selected>
+                      Comentário
+                    </option>
+                    <option value="Parceria">Parceria</option>
+                    <option value="Dúvida">Dúvida</option>
+                    <option value="Sugestão">Sugestão</option>
+                    <option value="Crítica">Crítica</option>
+                    <option value="Outro">Outro</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="linhaForm">
+                <div class="colunaForm-a">
+                  <label for="mensagemContato" class="labelContato">
+                    Mensagem:
+                  </label>
+                </div>
+                <div class="colunaForm-b">
+                  <textarea id="mensagemContato" name="Mensagem" class="mensagemContato" rows="2" required></textarea>
+                </div>
+              </div>
+              <div class="linhaFor ultimaLinhaForm">
+                <div class="colunaForm-c">
+                  <div>
+                    <!-- Não visualizável -->
+                    <!-- adicione esse campo para incluir proteções adicionais contra spam -->
+                    <input type="hidden" name="_gotcha">
+                    <!-- botao submiter-->
+                    <div class="esconder">
+                      <input id="submeteForm" type="submit" value="Submit">
+                    </div>
+                    <!-- Não visualizável-->
+                    <div class="botao">
+                      <label for="submeteForm" class="a-sbmt">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Enviar</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </fieldset>
+          </form>
+        </div>
+        <footer class="rodape midiaSocial">
+          <div class="caixaRodapeContato">
+            <div class="caixaLinkSociais">
+              <a href="https://www.linkedin.com/in/bruno-moraes-704728145/" class="fa-brands fa-linkedin-in"
+                aria-hidden="true" target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://github.com/brunomoraesdigital" class="fa-brands fa-github" aria-hidden="true"
+                target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://www.tiktok.com/@bruno_moraes_?_t=ZM-8z11GFE9OUg&_r=1" class="fa-brands fa-tiktok"
+                aria-hidden="true" target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://www.youtube.com/@meupassatempo" class="fa-brands fa-youtube" aria-hidden="true"
+                target="_blank" rel="noopener noreferrer"></a>
+              <a href="https://pin.it/1kr1i3wrx" class="fa-brands fa-pinterest-p" aria-hidden="true" target="_blank"
+                rel="noopener noreferrer"></a>
+              <a href="#" class="fa-brands fa-instagram" aria-hidden="true" target="_blank"
+                rel="noopener noreferrer"></a>
+            </div>
+
+            <div>
+              <p id="ano-atual" class="copyright">
+                &#169; 2025 Bruno Moraes | <a href="licenca-agplv3.html" title="Visualizar licença AGPLv3"
+                  target="_blank">Evoluindo a cada código</a>
+              </p>
+            </div>
+          </div>
+        </footer>
+      </section>
+    </label>
+    <!---->
+  </main>
+
+  <!---------------------------->
+  <!-- SCRIPTS JS             -->
+  <!---------------------------->
+  <script type="module">
+    // 1. importa o initializeApp e o Analytics (incluindo o logEvent)
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-app.js";
+    import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/12.7.0/firebase-analytics.js";
+
+    // 2. minha configuração
+    const firebaseConfig = {
+      apiKey: "AIzaSyCkiYhYg-fUn9o7teqHKagnIl5SGZ6GAPY",
+      authDomain: "bmfolio.firebaseapp.com",
+      projectId: "bmfolio",
+      storageBucket: "bmfolio.firebasestorage.app",
+      messagingSenderId: "1067861123790",
+      appId: "1:1067861123790:web:07502c385e51b828e9e69f",
+      measurementId: "G-R59C91JQMY"
+    };
+
+    // 3. Inicializa o Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+
+    // 4. LÓGICA DE RASTREIO DINÂMICO
+    // Esta parte lê o que eu colocar no link do GitHub automaticamente
+    const urlParams = new URLSearchParams(window.location.search);
+    const origem = urlParams.get('utm_source'); // ex: github
+    const detalhe = urlParams.get('utm_medium'); // ex: repo_calculadora, profile, etc.
+
+    if (origem === 'github' && detalhe) {
+      // Envia para o Firebase o evento com o nome do repositório específico
+      logEvent(analytics, 'origem_github', {
+        local_clicado: detalhe,
+        campanha: urlParams.get('utm_campaign') || 'portfolio'
+      });
+
+      console.log("✅ Sucesso! Visitante do GitHub detectado via: " + detalhe);
+    }
+  </script>
+  <script src="scripts.js"></script>
+
+  <!-- ----- -->
+
+  <script>
+
+  </script>
+
+</body>
+
+</html>

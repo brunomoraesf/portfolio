@@ -1,0 +1,353 @@
+@charset "utf-8";
+
+html {
+  width: 100vw;
+  height: 100vh;
+  font-size: 16px;
+  user-select: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+}
+
+.principal {
+  flex: 0 0 100%;
+  display: flex;
+}
+
+.label-secao {
+  display: flex;
+}
+
+.esconder {
+  display: none;
+}
+
+/* BACKGROUND DAS SEÇÕES */
+.secao {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.label-secao:nth-child(2) .secao {
+  background-image: url(imagens/aguia.jpg);
+}
+
+.label-secao:nth-child(3) .secao {
+  background-image: url(imagens/habilidades.jpg);
+}
+
+.label-secao:nth-child(4) .secao {
+  background-image: url(imagens/projetos.jpg);
+}
+
+.label-secao:nth-child(5) .secao {
+  background-image: url(imagens/blog.jpg);
+}
+
+.label-secao:nth-child(6) .secao {
+  background-image: url(imagens/contato.jpg);
+}
+
+.secao::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #2e2e2e;
+  opacity: 50%;
+  position: absolute;
+  pointer-events: none;
+}
+
+.cabecalho,
+.corpo,
+.rodape {
+  z-index: 2;
+}
+
+/* SEÇÕES */
+.corpo,
+.rodape,
+.ttl-a {
+  display: none;
+}
+
+.sec-ativa .corpo {
+  display: flex;
+}
+
+.sec-ativa .rodape {
+  display: flex;
+}
+
+.sec-ativa .ttl-a {
+  display: flex;
+}
+
+.sec-ativa .ttl-b {
+  display: none;
+}
+
+.cabecalho {
+  text-transform: uppercase;
+}
+
+.corpo {
+  flex-direction: column;
+  font-family: 'Lato', sans-serif;
+}
+
+/* TÍTULOS */
+.sec-ativa h1 {
+  text-shadow: 0.03125rem 0.03125rem #000, 0.0625rem 0.0625rem #000,
+    0.09375rem 0.09375rem #000, 0.125rem 0.125rem #000;
+  color: white;
+  font-weight: 900;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: white;
+  font-weight: 700;
+  font-size: 1.5625rem;
+}
+
+.sec-ativa h2 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5625rem;
+}
+
+h3 {
+  font-size: 1.13rem;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  font-size: 1.13rem;
+}
+
+.ttl-c {
+  text-transform: uppercase;
+}
+
+.ttl-blog {
+  text-transform: capitalize;
+}
+
+/* Ajuste do rodapé na seção contato */
+label.sec-ativa[for="contato"] .secao {
+  padding-bottom: 5.7rem;
+}
+
+/* MÍDIAS */
+.secao {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  color: #f2f2f2;
+  display: flex;
+  overflow: hidden;
+  border: 0.0625rem solid black;
+}
+
+.sec-ativa .secao {
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: stretch;
+  padding: 1rem;
+  cursor: default;
+}
+
+.cabecalho {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  width: 100%;
+}
+
+/* ============================================ */
+/* SEÇÃO SOBRE - Lista de apresentação           */
+/* ============================================ */
+
+/* Saudação "Olá, Mundo!" */
+.saudacao {
+  margin-bottom: 1rem;
+}
+
+/* Lista */
+.lista-sobre {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.lista-sobre li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 1.13rem;
+  line-height: 1.2;
+}
+
+.lista-sobre li i {
+  color: goldenrod;
+  font-size: 1rem;
+  width: 1.2rem;
+  text-align: center;
+  flex-shrink: 0;
+  padding-top: 0.15rem;
+}
+
+.boas-vindas {
+  margin-top: 1rem;
+  margin-bottom: 1rem;  
+}
+
+/* <strong> branco (negrito puro) */
+.corpo p strong {
+  color: goldenrod;
+  font-weight: 700;
+}
+
+.corpo li strong {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* ============================================ */
+
+@media only screen and (orientation: portrait) {
+  .principal {
+    flex-direction: column;
+  }
+
+  .label-secao {
+    flex: 0 0 7.5%;
+  }
+
+  .sec-ativa {
+    flex: 0 0 70%;
+    color: red;
+  }
+
+  .cabecalho {
+    align-items: center;
+  }
+
+  .sec-ativa .cabecalho {
+    height: fit-content;
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .label-secao:nth-child(2) .secao {
+    background-position: 50% 38%;
+  }
+
+  .label-secao:nth-child(3) .secao {
+    background-position: 65% 24%;
+  }
+
+  .label-secao:nth-child(4) .secao {
+    background-position: center;
+  }
+
+  .label-secao:nth-child(5) .secao {
+    background-position: center;
+  }
+
+  .label-secao:nth-child(6) .secao {
+    background-position: 75% 30%;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .principal {
+    flex-direction: row;
+  }
+
+  .label-secao {
+    flex: 0 0 10%;
+  }
+
+  .sec-ativa {
+    flex: 0 0 60%;
+  }
+
+  .cabecalho {
+    position: relative;
+  }
+
+  .sec-ativa .cabecalho {
+    width: 100%;
+    height: fit-content;
+  }
+
+  h2 {
+    transform: rotate(-90deg);
+    position: absolute;
+    bottom: 12%;
+  }
+
+  .sec-ativa h2 {
+    width: 100%;
+    transform: rotate(0deg);
+    position: initial;
+  }
+
+  .label-secao:nth-child(2) .secao {
+    background-position: 46% 40%;
+  }
+
+  .label-secao:nth-child(3) .secao {
+    background-position: 59% 24%;
+  }
+
+  .label-secao:nth-child(4) .secao {
+    background-position: 59% 0%;
+  }
+
+  .label-secao:nth-child(5) .secao {
+    background-position: center;
+  }
+
+  .label-secao:nth-child(6) .secao {
+    background-position: center;
+  }
+
+  .secao:hover h2 {
+    color: goldenrod;
+    transition: color 0.3s ease;
+  }
+
+  .sec-ativa .secao:hover h2 {
+    color: white;
+  }
+}
+
+@media only screen and (max-height: 420px) {
+  html {
+    font-size: 10px;
+  }
+}
